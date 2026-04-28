@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Smit Joshi — Junior Cloud & DevOps Engineer based in Toronto, ON. AWS Certified (SAA-C03, CLF-C02). Experienced with Terraform, Kubernetes, GitHub Actions, and Docker."/>
+  <meta property="og:url" content="https://smitjoshi.me/"/>
+  <meta property="og:title" content="Smit Joshi — Cloud & DevOps Engineer"/>
+  <meta property="og:description" content="AWS Certified Cloud Engineer building production-ready infrastructure with Terraform, Kubernetes, and GitHub Actions."/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Smit Joshi — Cloud & DevOps Engineer"/>
+  <meta name="twitter:description" content="AWS Certified Cloud Engineer — Toronto, ON. Terraform · Kubernetes · GitHub Actions."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://smitjoshi.me/"/>
+  <!-- SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><defs><linearGradient id='b' x1='24' y1='6' x2='24' y2='44' gradientUnits='userSpaceOnUse'><stop offset='0%25' stop-color='%237aaafe'/><stop offset='100%25' stop-color='%235b8dff'/></linearGradient></defs><path d='M24 8C20 12 10 16 6 28C10 24 16 22 20 26C16 30 14 36 16 42C20 36 24 32 24 32C24 32 28 36 32 42C34 36 32 30 28 26C32 22 38 24 42 28C38 16 28 12 24 8Z' fill='url(%23b)'/><ellipse cx='24' cy='10' rx='4.5' ry='5' fill='url(%23b)'/><path d='M24 13L26.5 16L24 15Z' fill='%23ff8c42'/></svg>"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="noise"></div>
+  <div class="grid-bg"></div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo-wrap">
+      <div class="falcon-mark">
+        <svg class="falcon-svg" viewBox="0 0 48 48" fill="none">
+          <defs>
+            <linearGradient id="fbody" x1="24" y1="6" x2="24" y2="44" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#7aaafe"/>
+              <stop offset="100%" stop-color="#5b8dff"/>
+            </linearGradient>
+            <linearGradient id="fwing" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#5b8dff"/>
+              <stop offset="100%" stop-color="#3dffa0" stop-opacity="0.8"/>
+            </linearGradient>
+          </defs>
+          <path d="M24 8C20 12 10 16 6 28C10 24 16 22 20 26C16 30 14 36 16 42C20 36 24 32 24 32C24 32 28 36 32 42C34 36 32 30 28 26C32 22 38 24 42 28C38 16 28 12 24 8Z" fill="url(#fbody)"/>
+          <path d="M20 26C14 20 6 18 2 22C8 20 14 24 16 30Z" fill="url(#fwing)"/>
+          <path d="M28 26C34 20 42 18 46 22C40 20 34 24 32 30Z" fill="url(#fwing)"/>
+          <ellipse cx="24" cy="10" rx="4.5" ry="5" fill="url(#fbody)"/>
+          <path d="M24 13L26.5 16L24 15Z" fill="#ff8c42"/>
+          <circle cx="25.5" cy="9.5" r="1.2" fill="#fff"/>
+          <circle cx="25.8" cy="9.5" r="0.6" fill="#0d0f14"/>
+          <circle cx="26.1" cy="9.2" r="0.25" fill="#fff"/>
+          <path d="M20 38C18 42 15 44 13 46C17 43 21 40 22 38Z" fill="url(#fwing)" opacity="0.8"/>
+          <path d="M24 40C24 44 23 46 22 48C24 44 26 44 28 48C27 46 24 44 24 40Z" fill="url(#fwing)" opacity="0.9"/>
+          <path d="M28 38C30 42 33 44 35 46C31 43 27 40 26 38Z" fill="url(#fwing)" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-name">Smit Joshi</span>
+        <span class="nav-logo-sub">Cloud Engineer</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="https://github.com/smjoshi28" target="_blank" rel="noopener" class="nav-icon" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      </a>
+      <a href="https://linkedin.com/in/smitjoshi28" target="_blank" rel="noopener" class="nav-icon linkedin" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#home" class="mob-link">Home</a>
+    <a href="#about" class="mob-link">About</a>
+    <a href="#skills" class="mob-link">Skills</a>
+    <a href="#experience" class="mob-link">Experience</a>
+    <a href="#projects" class="mob-link">Projects</a>
+    <a href="#certifications" class="mob-link">Certifications</a>
+    <a href="#contact" class="mob-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-eyebrow"><span class="status-dot"></span> Available for Junior Cloud / DevOps roles</div>
+      <h1 class="hero-name">Smit<br/><em>Joshi</em></h1>
+      <p class="hero-quote">"Infrastructure shouldn't be manual. <span class="hl">Automate everything.</span>"<br/></p>
+      <p class="hero-sub">AWS Certified Cloud Engineer building production-ready infrastructure with Terraform, Kubernetes, and GitHub Actions — based in Toronto, ON.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-fill">View Projects</a>
+        <a href="Smit_Joshi_Resume_2026_v2.docx" download class="btn-download" aria-label="Download Resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+
+    </div>
+    <div class="hero-visual">
+      <div class="terminal-card">
+        <div class="term-bar">
+          <span class="term-dot red"></span>
+          <span class="term-dot yellow"></span>
+          <span class="term-dot green"></span>
+          <span class="term-title">smit@cloud:~</span>
+        </div>
+        <div class="term-body" id="termBody"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-tag">// About</div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <h2 class="section-title">Who I Am</h2>
+        <p>I'm Smit Joshi, a recent Honours Bachelor of Technology graduate from Algoma University (Dec 2025) with a focused interest in cloud infrastructure and DevOps engineering. I hold two AWS certifications — <strong>Solutions Architect – Associate (SAA-C03)</strong> and <strong>Cloud Practitioner</strong> — and I'm actively working toward the <strong>HashiCorp Terraform Associate (HCTA-004)</strong>.</p>
+        <p>My work covers provisioning EKS clusters with Terraform, building DevSecOps pipelines with automated security scanning, architecting modular multi-tier AWS environments, and automating cost monitoring with serverless functions.</p>
+        <p>I'm actively seeking Junior Cloud Engineer, Cloud Support Engineer, or Junior DevOps roles across Canada where I can contribute from day one and keep growing.</p>
+        <div class="about-chips">
+          <span class="chip">📍 Toronto, ON</span>
+          <span class="chip">Open to Remote</span>
+          <span class="chip">Open to Contract</span>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-num">5</div><div class="stat-label">Cloud Projects</div></div>
+          <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Certifications</div></div>
+          <div class="stat-card"><div class="stat-num">3.0</div><div class="stat-label">GPA / 4.0</div></div>
+          <div class="stat-card"><div class="stat-num">&lt;10<span class="stat-unit">min</span></div><div class="stat-label">Infra from Scratch</div></div>
+        </div>
+        <div class="edu-block">
+          <div class="edu-label">EDUCATION</div>
+          <div class="edu-degree">Honours B.Tech – Software Development</div>
+          <div class="edu-school">Algoma University · May 2022 – Dec 2025 · Toronto, ON</div>
+          <div class="edu-gpa">GPA 3.0 / 4.0</div>
+          <div class="edu-courses">Data Structures & Algorithms · OOP · Software Design, Development & Testing · Database Systems & Optimization · Cloud Computing & DevOps · Software Project Management</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-tag">// Skills</div>
+    <h2 class="section-title">Technical Stack</h2>
+    <div class="skills-header-row">
+      <p class="section-sub" style="margin-bottom:0">Tools and technologies I build with every day.</p>
+      <div class="learning-chip">
+        <span class="learning-dot"></span>
+        Currently studying: <strong>HashiCorp Terraform Associate (HCTA-004)</strong>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-block reveal"><div class="skill-icon-wrap">☁️</div><div class="skill-cat">Cloud Platforms</div><div class="skill-pills"><span>EC2</span><span>S3</span><span>EKS</span><span>ECS Fargate</span><span>Lambda</span><span>IAM</span><span>VPC</span><span>RDS</span><span>CloudFront</span><span>Route 53</span><span>API Gateway</span><span>CloudWatch</span><span>SNS</span><span>AWS Config</span><span class="dim">Azure (Familiar)</span></div></div>
+      <div class="skill-block reveal"><div class="skill-icon-wrap">🐳</div><div class="skill-cat">Containers &amp; Orchestration</div><div class="skill-pills"><span>Docker</span><span>Kubernetes</span><span>EKS</span><span>Minikube</span><span>kubectl</span><span>Ingress</span><span>HPA</span><span>ConfigMaps</span><span>ECR</span></div></div>
+      <div class="skill-block reveal"><div class="skill-icon-wrap">🏗️</div><div class="skill-cat">Infrastructure as Code</div><div class="skill-pills"><span>Terraform</span><span>Modules</span><span>Workspaces</span><span>Remote State</span></div></div>
+      <div class="skill-block reveal"><div class="skill-icon-wrap">⚙️</div><div class="skill-cat">CI/CD &amp; Automation</div><div class="skill-pills"><span>GitHub Actions</span><span>Bash</span><span>Git</span><span>Agile / Scrum</span><span>Jira</span></div></div>
+      <div class="skill-block reveal"><div class="skill-icon-wrap">🔒</div><div class="skill-cat">Monitoring &amp; Security</div><div class="skill-pills"><span>CloudWatch Logs</span><span>Trivy</span><span>SonarCloud</span><span>IAM Least Privilege</span><span>HTTPS Enforcement</span><span>AWS Config</span></div></div>
+      <div class="skill-block reveal"><div class="skill-icon-wrap">💻</div><div class="skill-cat">Languages &amp; OS</div><div class="skill-pills"><span>Python (Boto3)</span><span>Java</span><span>JavaScript</span><span>SQL</span><span>HTML</span><span>Linux</span><span>Unix</span></div></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-tag">// Experience</div>
+    <h2 class="section-title">Professional Journey</h2>
+    <p class="section-sub">Where I've worked and what I've learned.</p>
+    <div class="exp-timeline">
+      <div class="exp-card reveal">
+        <div class="exp-left">
+          <div class="exp-date">Aug 2023 – Present</div>
+          <div class="exp-loc">📍 Toronto, ON</div>
+          <div class="exp-tags"><span>Reliability</span><span>Teamwork</span><span>Process</span></div>
+        </div>
+        <div class="exp-connector"><div class="exp-dot"></div><div class="exp-line"></div></div>
+        <div class="exp-right">
+          <div class="exp-role">Front Griller <span class="exp-type">Part-Time</span></div>
+          <div class="exp-company">Nando's</div>
+          <ul class="exp-bullets">
+            <li>Operated in a fast-paced, high-volume environment requiring consistent execution under time pressure</li>
+            <li>Maintained strict adherence to standardized processes and quality controls across shifts</li>
+            <li>Coordinated with team members during peak hours to ensure smooth service and minimize delays</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-tag">// Projects</div>
+    <h2 class="section-title">What I've Built</h2>
+    <p class="section-sub">Production-grade cloud projects — full coverage from IaC to observability.</p>
+    <div class="projects-grid">
+
+      <div class="proj-card reveal" data-project="0" data-repo="https://github.com/smjoshi28/eks-deployment">
+        <div class="proj-bg" style="background:linear-gradient(135deg,#1a3a6b,#0d5c8a)">
+          <span class="proj-bg-text">K8s</span>
+          <span class="proj-bg-icon">⎈</span>
+        </div>
+        <div class="proj-info">
+          <div class="proj-card-title">Production-Ready EKS Deployment</div>
+          <div class="proj-card-desc">Provisioned an EKS cluster with Terraform, GitHub Actions CI/CD, and CloudWatch observability — deployed with a single git push.</div>
+        </div>
+        <div class="proj-hover-btn">🔗 View Details</div>
+      </div>
+
+      <div class="proj-card reveal" data-project="1" data-repo="https://github.com/smjoshi28/devsecops-pipeline">
+        <div class="proj-bg" style="background:linear-gradient(135deg,#1a4a2e,#0d5a3e)">
+          <span class="proj-bg-text">Sec</span>
+          <span class="proj-bg-icon">🛡</span>
+        </div>
+        <div class="proj-info">
+          <div class="proj-card-title">DevSecOps CI/CD Pipeline</div>
+          <div class="proj-card-desc">Security-first pipeline with Trivy + SonarCloud scanning on every PR. Blocked 3 high-severity vulnerabilities before merge.</div>
+        </div>
+        <div class="proj-hover-btn">🔗 View Details</div>
+      </div>
+
+      <div class="proj-card reveal" data-project="2" data-repo="https://github.com/smjoshi28/three-tier-aws">
+        <div class="proj-bg" style="background:linear-gradient(135deg,#3d1a5c,#5a1a8a)">
+          <span class="proj-bg-text">AWS</span>
+          <span class="proj-bg-icon">☁</span>
+        </div>
+        <div class="proj-info">
+          <div class="proj-card-title">Three-Tier Web Application</div>
+          <div class="proj-card-desc">Modular 3-tier AWS architecture with Terraform workspaces, ALB, Auto Scaling, and private RDS — full envs in under 5 minutes.</div>
+        </div>
+        <div class="proj-hover-btn">🔗 View Details</div>
+      </div>
+
+      <div class="proj-card reveal" data-project="3" data-repo="https://github.com/smjoshi28/aws-cost-alert">
+        <div class="proj-bg" style="background:linear-gradient(135deg,#5c3a00,#8a5200)">
+          <span class="proj-bg-text">λ</span>
+          <span class="proj-bg-icon">🐍</span>
+        </div>
+        <div class="proj-info">
+          <div class="proj-card-title">AWS Cost Spike Alert System</div>
+          <div class="proj-card-desc">Serverless Lambda + Boto3 billing monitor with SNS alerts. Zero infrastructure cost, least-privilege IAM throughout.</div>
+        </div>
+        <div class="proj-hover-btn">🔗 View Details</div>
+      </div>
+
+      <div class="proj-card reveal" data-project="4" data-repo="https://github.com/smjoshi28/cloud-resume-challenge">
+        <div class="proj-bg" style="background:linear-gradient(135deg,#1a2a4a,#0a3d62)">
+          <span class="proj-bg-text">CRC</span>
+          <span class="proj-bg-icon">📄</span>
+        </div>
+        <div class="proj-info">
+          <div class="proj-card-title">Cloud Resume Challenge</div>
+          <div class="proj-card-desc">Serverless resume site on AWS — S3 + CloudFront + Route 53 frontend, Lambda + DynamoDB visitor counter, fully provisioned with Terraform and deployed via GitHub Actions CI/CD.</div>
+        </div>
+        <div class="proj-hover-btn">🔗 View Details</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certifications">
+    <div class="section-tag">// Certifications</div>
+    <h2 class="section-title">Credentials</h2>
+    <p class="section-sub">Earned and in progress — building toward a complete cloud and IaC stack.</p>
+    <div class="certs-grid">
+
+      <div class="cert-card earned reveal">
+        <div class="cert-card-header">
+          <div class="cert-logo">
+            <svg viewBox="0 0 80 22" fill="none" width="72" height="22">
+              <path d="M14.2 15.1c0 .4 0 .8.1 1.1.1.3.2.6.4.9 0 .1.1.2.1.3 0 .1-.1.2-.2.3l-.8.5c-.1.1-.2.1-.3.1s-.2-.1-.3-.2c-.2-.2-.3-.4-.4-.6-.1-.2-.2-.5-.4-.9-1 1.2-2.3 1.8-3.8 1.8-1.1 0-1.9-.3-2.5-.9-.6-.6-1-1.4-1-2.5 0-1.1.4-2 1.2-2.7.8-.7 1.8-1 3.1-1 .4 0 .9 0 1.4.1s1 .2 1.5.4V11c0-1-.2-1.7-.6-2.1-.4-.4-1.1-.7-2.1-.7-.4 0-.9.1-1.4.2s-.9.3-1.4.5c-.2.1-.3.1-.4.2H6.7c-.2 0-.3-.1-.3-.4v-.6c0-.2 0-.3.1-.4.1-.1.2-.2.4-.3.5-.3 1-.5 1.7-.6.7-.2 1.4-.3 2.2-.3 1.6 0 2.8.4 3.5 1.1.7.7 1.1 1.8 1.1 3.3l-.2 4.5zm-5.2 1.9c.4 0 .8-.1 1.2-.3s.8-.5 1.2-1c.2-.3.3-.5.4-.9.1-.3.1-.7.1-1.2v-.6c-.4-.1-.8-.2-1.3-.3-.5-.1-.9-.1-1.3-.1-.9 0-1.5.2-2 .6-.5.4-.7.9-.7 1.6 0 .6.2 1.1.5 1.4.3.3.8.5 1.4.5l.5-.7zm10.8 1.4c-.2 0-.4-.1-.5-.1-.1-.1-.2-.3-.3-.6L16.3 8.4c-.1-.2-.1-.4-.1-.5 0-.2.1-.3.3-.3H18c.2 0 .4.1.4.1.1.1.2.3.2.6L20.8 17l2-8.3c.1-.3.1-.4.3-.6.1-.1.3-.1.5-.1h1.2c.2 0 .4.1.5.1.1.1.2.3.3.6L27.5 17l2.2-8.5c.1-.3.2-.4.2-.6.1-.1.3-.1.5-.1h1.3c.2 0 .4.1.4.3v.2l-.1.3-3.2 9.5c-.1.3-.2.5-.3.6-.1.1-.3.1-.5.1h-1.1c-.2 0-.4-.1-.5-.1-.1-.1-.2-.3-.3-.6L24 9.9l-2 7.8c-.1.3-.2.5-.3.6-.1.1-.3.1-.5.1l-1.4-.1zm14.7.2c-.8 0-1.7-.1-2.5-.3-.8-.2-1.5-.4-2-.7-.3-.2-.4-.3-.5-.5v-.4-.7c0-.3.1-.4.3-.4h.3l.3.1c.6.3 1.2.5 1.8.6.6.1 1.3.2 2 .2 1.1 0 1.9-.2 2.5-.6.6-.4.9-.9.9-1.5 0-.5-.2-.8-.4-1.1-.3-.3-.8-.6-1.6-.9l-2.2-.7c-1.2-.4-2-.9-2.6-1.6-.6-.7-.8-1.4-.8-2.2 0-.7.1-1.3.5-1.8.3-.5.7-1 1.2-1.3.5-.4 1-.6 1.7-.8.7-.2 1.4-.3 2.1-.3.4 0 .8 0 1.1.1.4.1.7.1 1 .2.3.1.6.2.9.3.3.1.4.2.6.3.2.1.3.3.4.4v1.1c0 .3-.1.4-.3.4-.1 0-.3-.1-.5-.2-.8-.4-1.7-.6-2.8-.6-1 0-1.7.2-2.2.5-.5.3-.8.8-.8 1.5 0 .5.2.8.5 1.1.3.3.9.6 1.8.9l2.2.7c1.2.4 2 .9 2.5 1.6.5.7.8 1.4.8 2.3 0 .7-.1 1.3-.4 1.8-.3.6-.7 1-1.2 1.4-.5.4-1.1.7-1.8.9-.8.1-1.6.2-2.4.2z" fill="#FF9900"/>
+            </svg>
+          </div>
+          <div class="cert-status-badge earned-badge">✓ Earned</div>
+        </div>
+        <div class="cert-name-big">Solutions Architect</div>
+        <div class="cert-level">Associate</div>
+        <div class="cert-code">SAA-C03</div>
+        <div class="cert-date-row">
+          <span class="cert-date-label">Issued</span>
+          <span class="cert-date-val">Feb 2026</span>
+        </div>
+        <div class="cert-bar-wrap">
+          <div class="cert-bar cert-bar-full" style="width:100%"></div>
+        </div>
+      </div>
+
+      <div class="cert-card earned reveal">
+        <div class="cert-card-header">
+          <div class="cert-logo">
+            <svg viewBox="0 0 80 22" fill="none" width="72" height="22">
+              <path d="M14.2 15.1c0 .4 0 .8.1 1.1.1.3.2.6.4.9 0 .1.1.2.1.3 0 .1-.1.2-.2.3l-.8.5c-.1.1-.2.1-.3.1s-.2-.1-.3-.2c-.2-.2-.3-.4-.4-.6-.1-.2-.2-.5-.4-.9-1 1.2-2.3 1.8-3.8 1.8-1.1 0-1.9-.3-2.5-.9-.6-.6-1-1.4-1-2.5 0-1.1.4-2 1.2-2.7.8-.7 1.8-1 3.1-1 .4 0 .9 0 1.4.1s1 .2 1.5.4V11c0-1-.2-1.7-.6-2.1-.4-.4-1.1-.7-2.1-.7-.4 0-.9.1-1.4.2s-.9.3-1.4.5c-.2.1-.3.1-.4.2H6.7c-.2 0-.3-.1-.3-.4v-.6c0-.2 0-.3.1-.4.1-.1.2-.2.4-.3.5-.3 1-.5 1.7-.6.7-.2 1.4-.3 2.2-.3 1.6 0 2.8.4 3.5 1.1.7.7 1.1 1.8 1.1 3.3l-.2 4.5zm-5.2 1.9c.4 0 .8-.1 1.2-.3s.8-.5 1.2-1c.2-.3.3-.5.4-.9.1-.3.1-.7.1-1.2v-.6c-.4-.1-.8-.2-1.3-.3-.5-.1-.9-.1-1.3-.1-.9 0-1.5.2-2 .6-.5.4-.7.9-.7 1.6 0 .6.2 1.1.5 1.4.3.3.8.5 1.4.5l.5-.7zm10.8 1.4c-.2 0-.4-.1-.5-.1-.1-.1-.2-.3-.3-.6L16.3 8.4c-.1-.2-.1-.4-.1-.5 0-.2.1-.3.3-.3H18c.2 0 .4.1.4.1.1.1.2.3.2.6L20.8 17l2-8.3c.1-.3.1-.4.3-.6.1-.1.3-.1.5-.1h1.2c.2 0 .4.1.5.1.1.1.2.3.3.6L27.5 17l2.2-8.5c.1-.3.2-.4.2-.6.1-.1.3-.1.5-.1h1.3c.2 0 .4.1.4.3v.2l-.1.3-3.2 9.5c-.1.3-.2.5-.3.6-.1.1-.3.1-.5.1h-1.1c-.2 0-.4-.1-.5-.1-.1-.1-.2-.3-.3-.6L24 9.9l-2 7.8c-.1.3-.2.5-.3.6-.1.1-.3.1-.5.1l-1.4-.1zm14.7.2c-.8 0-1.7-.1-2.5-.3-.8-.2-1.5-.4-2-.7-.3-.2-.4-.3-.5-.5v-.4-.7c0-.3.1-.4.3-.4h.3l.3.1c.6.3 1.2.5 1.8.6.6.1 1.3.2 2 .2 1.1 0 1.9-.2 2.5-.6.6-.4.9-.9.9-1.5 0-.5-.2-.8-.4-1.1-.3-.3-.8-.6-1.6-.9l-2.2-.7c-1.2-.4-2-.9-2.6-1.6-.6-.7-.8-1.4-.8-2.2 0-.7.1-1.3.5-1.8.3-.5.7-1 1.2-1.3.5-.4 1-.6 1.7-.8.7-.2 1.4-.3 2.1-.3.4 0 .8 0 1.1.1.4.1.7.1 1 .2.3.1.6.2.9.3.3.1.4.2.6.3.2.1.3.3.4.4v1.1c0 .3-.1.4-.3.4-.1 0-.3-.1-.5-.2-.8-.4-1.7-.6-2.8-.6-1 0-1.7.2-2.2.5-.5.3-.8.8-.8 1.5 0 .5.2.8.5 1.1.3.3.9.6 1.8.9l2.2.7c1.2.4 2 .9 2.5 1.6.5.7.8 1.4.8 2.3 0 .7-.1 1.3-.4 1.8-.3.6-.7 1-1.2 1.4-.5.4-1.1.7-1.8.9-.8.1-1.6.2-2.4.2z" fill="#FF9900"/>
+            </svg>
+          </div>
+          <div class="cert-status-badge earned-badge">✓ Earned</div>
+        </div>
+        <div class="cert-name-big">Cloud Practitioner</div>
+        <div class="cert-level">Foundational</div>
+        <div class="cert-code">CLF-C02</div>
+        <div class="cert-date-row">
+          <span class="cert-date-label">Issued</span>
+          <span class="cert-date-val">Feb 2025</span>
+        </div>
+        <div class="cert-bar-wrap">
+          <div class="cert-bar cert-bar-full" style="width:100%"></div>
+        </div>
+      </div>
+
+      <div class="cert-card in-progress reveal">
+        <div class="cert-card-header">
+          <div class="cert-logo tf-logo">
+            <svg viewBox="0 0 60 60" fill="none" width="38" height="38">
+              <path d="M37.5 14.3L24 22V7.6L37.5 0v14.3z" fill="#7B42BC"/>
+              <path d="M39.5 14.3L53 22V7.6L39.5 0v14.3z" fill="#5C4EE5"/>
+              <path d="M7 22.3L20.5 30V15.6L7 7.9v14.4z" fill="#7B42BC"/>
+              <path d="M24 37.7V52l13.5-7.7V29.9L24 37.7z" fill="#5C4EE5"/>
+              <path d="M24 22v15.7l13.5-7.8V14.3L24 22z" fill="#7B42BC"/>
+              <path d="M39.5 29.9V44.3L53 52V37.7L39.5 29.9z" fill="#7B42BC"/>
+            </svg>
+          </div>
+          <div class="cert-status-badge progress-badge">⏳ In Progress</div>
+        </div>
+        <div class="cert-name-big">Terraform Associate</div>
+        <div class="cert-level">Associate</div>
+        <div class="cert-code">HCTA-004</div>
+        <div class="cert-date-row">
+          <span class="cert-date-label">Target</span>
+          <span class="cert-date-val">2026</span>
+        </div>
+        <div class="cert-progress-label">
+          <span>Progress</span>
+          <span>65%</span>
+        </div>
+        <div class="cert-bar-wrap">
+          <div class="cert-bar cert-bar-progress" style="width:65%"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-divided" id="contact">
+    <div class="section-tag">// Contact</div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-sub">Open to Junior Cloud / DevOps roles across Canada. Let's talk.</p>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-label">Email</div>
+        <a href="mailto:smitmanishbhai@gmail.com" class="contact-card-val">smitmanishbhai@gmail.com</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-label">Phone</div>
+        <a href="tel:+14374344672" class="contact-card-val">+1 (437) 434-4672</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-card-icon">💼</div>
+        <div class="contact-card-label">LinkedIn</div>
+        <a href="https://linkedin.com/in/smitjoshi28" target="_blank" rel="noopener" class="contact-card-val">linkedin.com/in/smitjoshi28</a>
+      </div>
+      <div class="contact-card reveal">
+        <div class="contact-card-icon">🐙</div>
+        <div class="contact-card-label">GitHub</div>
+        <a href="https://github.com/smjoshi28" target="_blank" rel="noopener" class="contact-card-val">github.com/smjoshi28</a>
+      </div>
+    </div>
+    <div class="contact-cta reveal">
+        <a href="Smit_Joshi_Resume_2026_v2.docx" download class="btn-download">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg class="falcon-svg-sm" viewBox="0 0 48 48" fill="none">
+          <defs>
+            <linearGradient id="fbodyF" x1="24" y1="6" x2="24" y2="44" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#7aaafe"/>
+              <stop offset="100%" stop-color="#5b8dff"/>
+            </linearGradient>
+            <linearGradient id="fwingF" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#5b8dff"/>
+              <stop offset="100%" stop-color="#3dffa0" stop-opacity="0.8"/>
+            </linearGradient>
+          </defs>
+          <path d="M24 8C20 12 10 16 6 28C10 24 16 22 20 26C16 30 14 36 16 42C20 36 24 32 24 32C24 32 28 36 32 42C34 36 32 30 28 26C32 22 38 24 42 28C38 16 28 12 24 8Z" fill="url(#fbodyF)"/>
+          <path d="M20 26C14 20 6 18 2 22C8 20 14 24 16 30Z" fill="url(#fwingF)"/>
+          <path d="M28 26C34 20 42 18 46 22C40 20 34 24 32 30Z" fill="url(#fwingF)"/>
+          <ellipse cx="24" cy="10" rx="4.5" ry="5" fill="url(#fbodyF)"/>
+          <path d="M24 13L26.5 16L24 15Z" fill="#ff8c42"/>
+          <circle cx="25.5" cy="9.5" r="1.2" fill="#fff"/>
+          <circle cx="25.8" cy="9.5" r="0.6" fill="#0d0f14"/>
+        </svg>
+        <span class="footer-logo-name">Smit Joshi</span>
+      </div>
+      <div class="footer-copy">2026 © All Rights Reserved. Made by Smit Joshi</div>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">✕</button>
+      <div class="modal-scroll">
+        <div class="modal-header">
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-subtitle" id="modalSubtitle"></p>
+          <p class="modal-desc" id="modalDesc"></p>
+          <a class="modal-github-btn" id="modalGithub" href="https://github.com/smjoshi28" target="_blank" rel="noopener">🔗 View Code</a>
+        </div>
+        <div class="modal-cols">
+          <div class="modal-col">
+            <div class="modal-col-head"><span>🎯</span> Key Points</div>
+            <ul class="modal-list" id="modalPoints"></ul>
+          </div>
+          <div class="modal-col">
+            <div class="modal-col-head"><span>🧩</span> Challenges</div>
+            <p class="modal-challenge" id="modalChallenge"></p>
+            <div class="modal-col-head" style="margin-top:24px"><span>📊</span> More Info</div>
+            <div class="modal-meta" id="modalMeta"></div>
+          </div>
+        </div>
+        <div class="modal-tech-section">
+          <div class="modal-col-head"><span>🔧</span> Technologies</div>
+          <div class="modal-techs" id="modalTechs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -10,10 +10,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4 # Upgraded to v4
+      uses: actions/checkout@v4
 
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v4 # Upgraded to v4
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -24,9 +24,11 @@ jobs:
         aws s3 sync ./frontend s3://${{ secrets.S3_BUCKET }} --delete
 
     - name: Invalidate CloudFront cache
-      # This check ensures the step only runs if the secret is actually provided
-      if: ${{ secrets.CLOUDFRONT_DIST_ID != '' }}
+      # We map the secret to an env variable first to safely check if it exists
+      env:
+        CLOUDFRONT_DIST_ID: ${{ secrets.CLOUDFRONT_DIST_ID }}
+      if: env.CLOUDFRONT_DIST_ID != ''
       run: |
         aws cloudfront create-invalidation \
-          --distribution-id ${{ secrets.CLOUDFRONT_DIST_ID }} \
+          --distribution-id $CLOUDFRONT_DIST_ID \
           --paths "/*"

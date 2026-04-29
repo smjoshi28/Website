@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+# Silences the Node.js 20 deprecation warnings for the 2026 runner update
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Sync frontend to S3
@@ -24,7 +28,6 @@ jobs:
         aws s3 sync ./frontend s3://${{ secrets.S3_BUCKET }} --delete
 
     - name: Invalidate CloudFront cache
-      # We map the secret to an env variable first to safely check if it exists
       env:
         CLOUDFRONT_DIST_ID: ${{ secrets.CLOUDFRONT_DIST_ID }}
       if: env.CLOUDFRONT_DIST_ID != ''
